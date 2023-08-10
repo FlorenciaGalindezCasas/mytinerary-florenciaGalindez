@@ -1,0 +1,43 @@
+header{
+    background-color:#C1D1EA;
+}
+
+.logo{
+    margin-left: 5%;
+}
+
+.menu{
+    justify-content: flex-end;
+}
+
+.links{
+    display:flex;
+    justify-content: space-around;
+}
+
+.login{
+    display:flex;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+    padding:8px;   
+}
+
+.login:hover{
+    color: white;
+    background-color: #6D99E0;
+}
+
+.profile {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 5px; 
+    padding:0.7em;
+}
+
+
+
+.profile:hover{
+    color: gray;
+}

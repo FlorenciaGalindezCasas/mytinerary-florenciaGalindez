@@ -1,0 +1,23 @@
+footer{
+    background-color:#C1D1EA;
+    display:flex;
+    justify-content: space-around;  
+    botton: 0;
+}
+
+.link{
+    display: flex;
+    justify-content:flex-end;
+    gap: 3rem; 
+    padding: 10px;
+}
+
+.social{
+    display: flex; 
+    padding: 5px;
+}
+
+.social a:hover{
+    opacity: 0.5;   
+}
+

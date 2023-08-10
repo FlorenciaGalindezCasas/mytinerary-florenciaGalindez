@@ -1,0 +1,62 @@
+.popularCities h2{
+    text-align:center;
+    font-size:2.5em;
+    font-family: verdana,sans-serif;
+}
+
+.flexcontainer{
+    justify-content: center;
+    padding: 15px 10px 15px 10px; 
+    background-color:#E5E8F5;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imgCities{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.imgCities img{
+    float: left;
+    width:  500px;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #E5E8F5;
+}
+
+.arrow-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.arrow{
+    font-size:20px;
+    text-align: center;
+    color: #6D99E0;
+}
+
+.imgCointainer p {
+    display: flex;
+    align-items: center;
+    position:absolute; 
+    margin: 15px 0 0 20px; 
+    color:black;
+    border-radius:5px;
+    background-color:white;
+    opacity: 0.5;   
+    padding:0.2em;
+}
+
+.imgCointainer span{
+    color:red;
+}
+
+

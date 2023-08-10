@@ -1,0 +1,100 @@
+.hero {
+  background-color: #e5e8f5;
+  padding: 9%;
+  margin: 0;
+  text-align: center;
+}
+.cloud-text {
+  font-family: verdana, sans-serif;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(./public/title.jpg);
+  background-size: auto;
+  background-attachment: unset;
+  background-position: 0%;
+  width: 100%;
+  margin-bottom: 0;
+  font-size: 9em;
+  animation: clouds-moving infinite 150s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .cloud-text {
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud-text {
+    font-size: 2.5em;
+  }
+}
+
+@keyframes clouds-moving {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.slogan {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+
+.callTo {
+  margin-top: 8%;
+}
+
+.underlined {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  flex: 1.2;
+  font-size: 2em;
+  line-height: 2;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #f9ea6c 0, #f9ea6c 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.7s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
+}
+
+.floating {
+  display: flex;
+  align-items: cen;
+  transition: transform 0.3s ease;
+  margin-left: 100%;
+  margin-top: -30%;
+}
+
+.callTo:hover {
+  .floating {
+    animation-name: floating;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0%, -10%);
+  }
+
+  100% {
+    transform: translate(120%, -100%);
+  }
+}

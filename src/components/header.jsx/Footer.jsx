@@ -7,8 +7,9 @@ const Footer = () => {
 
   const links = [
     { title: "Home", to: "/" },
-    { title: "About us", to: "/about" },
-    { title: "Contact us", to: "/contact" }
+    { title: "Account", to: "/account" },
+    { title: "About", to: "/about" },
+    { title: "Contact", to: "/contact" },
   ];
   return (
     <footer>

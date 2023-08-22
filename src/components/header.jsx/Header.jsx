@@ -3,14 +3,12 @@ import { Link as Anchor, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaRegUser } from "react-icons/fa";
 
-
-
 const Header = () => {
   let [show, setShow] = useState(true);
 
   const links = [
-    { title: "Home", to: "/" },
-    { title: "Cities", to: "/cities" }
+    { title: "Home", to: "/", id:1 },
+    { title: "Cities", to: "/cities", id:2 }
   ];
 
   const handleShowMenu = ()=> {
@@ -19,14 +17,14 @@ const Header = () => {
 
   return (
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid logo">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid logo">
+          <a className="navbar-brand" href="/">
             MY TINERARY
             <img src="./public/paperplane.ico" alt="" />
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -34,14 +32,14 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse menu" id="navbarNavAltMarkup">
-            <div class="navbar-nav col-2 links">
+          <div className="collapse navbar-collapse menu" id="navbarNavAltMarkup">
+            <div className="navbar-nav col-2 links">
               {links.map((link) => (
-                <Link key={link.title} to={link.to}>
+                <Anchor key={link.title} to={link.to}>
                   {link.title}
-                </Link>
+                </Anchor>
               ))}
             </div>
             <div className="col-2">

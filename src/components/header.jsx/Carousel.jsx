@@ -142,7 +142,7 @@ function Carousel() {
             {images
               .slice(index * imagesPerSlide, (index + 1) * imagesPerSlide)
               .map((image) => (
-                <div className="imgCointainer">
+                <div className="imgCointainer" key={image.title}>
                   <div>
                     <img src={image.url} alt="" />
                     <p>

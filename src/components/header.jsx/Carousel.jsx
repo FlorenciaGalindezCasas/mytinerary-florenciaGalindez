@@ -10,53 +10,53 @@ function Carousel() {
   const images = [
     {
       title: "Bariloche, Argentina",
-      url: "./public/bariloche.jpg",
+      url: "/bariloche.jpg",
     },
     {
       title: "Cataratas del Iguazu, Argentina",
-      url: "./public/cataratasDelIguazu.jpg",
+      url: "/cataratasDelIguazu.jpg",
     },
     {
       title: "Firenze, Italy",
-      url: "./public/firenze.jpg",
+      url: "/firenze.jpg",
     },
     {
       title: "La Habana, Cuba",
-      url: "./public/laHabana.jpg",
+      url: "/laHabana.jpg",
     },
 
     {
       title: "London, England",
-      url: "./public/london.jpg",
+      url: "/london.jpg",
     },
     {
       title: "Los Angeles, USA",
-      url: "./public/losAngeles.jpg ",
+      url: "/losAngeles.jpg ",
     },
     {
       title: "Machu Picchu, Peru",
-      url: "./public/machuPicchu.jpg",
+      url: "/machuPicchu.jpg",
     },
     {
       title: "Paris, France",
-      url: "./public/paris.jpg",
+      url: "/paris.jpg",
     },
 
     {
       title: "Roma, Italy",
-      url: "./public/roma.jpg",
+      url: "/roma.jpg",
     },
     {
       title: "San Francisco, USA",
-      url: "./public/sanFrancisco.jpg ",
+      url: "/sanFrancisco.jpg ",
     },
     {
       title: "Tokyo, Japan",
-      url: "./public/tokyo.jpg",
+      url: "/tokyo.jpg",
     },
     {
       title: "Venecia, Italy",
-      url: "./public/venecia.jpg",
+      url: "/venecia.jpg",
     },
   ];
 
@@ -168,7 +168,7 @@ function Carousel() {
   return (
     <div className="flexcontainer">
       <div className="popularCities">
-        <h2>Popular Mytineraries</h2>
+        <h2>POPULAR MYTINERARIES</h2>
         <div className="flexcontainer d-flex flex-row">
           <div className="imgCities">{renderSingleImage()}</div>
         </div>

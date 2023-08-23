@@ -7,23 +7,38 @@
 
 .card-body{
     display:flex;
-    flex-direction: column;
     justify-content:center;
+    align-items:center;
     background-size:cover;
+    border-radius:10px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 1px black;
 }
 
 .card-body:hover{
-    .container{
+    filter: grayscale(80%);
+    .card-title,.card-country {
          display:none;
     }
+    .card-text{
+        display: flex;
+        text-shadow: 1px 1px 1px black;
+    }
+}
+
+.card-country{
+    display:flex;
+}
+
+.card-text{
+    display:none;
 }
 
 .container{   
     color:white;
     width:80%;
     border-radius: 3%;
-    background-color: black;
-    opacity:0.5
+    font-weight: bold;
 }
 
 .card-title{

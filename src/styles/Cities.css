@@ -1,5 +1,6 @@
 .bodyCities{
     background-color: #e5e8f5;
+    min-height:100vh;
 }
 
 .input{
@@ -13,10 +14,6 @@ input{
     border-radius:3%;
 }
 
-input:active{
-    border:none
-}
-
 .cityCards{
     padding-top:100px;
     padding-bottom:122px;
@@ -24,11 +21,21 @@ input:active{
     align-items: center;
 }
 
-.title{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 1.2em;
+.title {
     text-align:center;
-    padding: 20px;
+    padding: 50px 0 20px 0;
+}
+
+.title h2{
+    font-size: 2em;
+}
+
+.title p{
+    font-size: 1.5em;
+}
+
+.title h2, .title p{
+    font-family: "Times New Roman", serif;
 }
 
 .error{
@@ -38,7 +45,13 @@ input:active{
     padding-bottom:216px;
 }
 
-a{
-    padding:2px;
+
+.back a{
+   font-size:35px;
+   position: fixed;
+}
+
+.back a:hover{
+    color:white;
 }
 

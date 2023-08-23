@@ -21,7 +21,7 @@ const Header = () => {
         <div className="container-fluid logo">
           <a className="navbar-brand" href="/">
             MY TINERARY
-            <img src="./public/paperplane.ico" alt="" />
+            <img src="/paperplane.ico" alt="" />
           </a>
           <button
             className="navbar-toggler"
@@ -45,7 +45,7 @@ const Header = () => {
             <div className="col-2">
               {show ? (
                 <button className="profile" onClick={handleShowMenu}>
-                  <img src="./public/profile.png" />
+                  <img src="/profile.png" />
                   You are not logged in. (Log in)
                 </button>
               ) : (

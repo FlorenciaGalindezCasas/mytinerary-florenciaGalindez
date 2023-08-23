@@ -10,10 +10,12 @@ header{
     justify-content: flex-end;
 }
 
-.links{
+.links {
     display:flex;
     justify-content: space-around;
+    font-family: "Times New Roman", Times, serif;
 }
+
 
 .login{
     display:flex;

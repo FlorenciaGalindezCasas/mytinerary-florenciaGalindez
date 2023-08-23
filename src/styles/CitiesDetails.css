@@ -1,7 +1,7 @@
 .city{
     height:1000px;
     background-size: cover;
-    margin:0
+    margin:0;
 }
 
 .details, .leyend{
@@ -11,7 +11,9 @@
     color: white;
     background-color:none;
     font-size:2em;
+    font-weight: bold;
     padding-top:5%;
+    text-shadow: 1px 1px 1px black;
 }
 
 .leyend h1{

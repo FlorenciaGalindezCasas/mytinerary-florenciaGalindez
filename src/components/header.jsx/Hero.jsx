@@ -12,7 +12,7 @@ function Hero() {
         <div className="callTo">
           <a href="./cities" className="underlined">
             View more!
-            <img src="./public/paperplane.ico" className="floating"></img>
+            <img src="/paperplane.ico" className="floating"></img>
           </a>
         </div>
       </div>

@@ -35,24 +35,25 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse menu" id="navbarNavAltMarkup">
-            <div className="navbar-nav col-2 links">
+            <div className="navbar-nav col-2 anchor">
               {links.map((link) => (
-                <Anchor key={link.title} to={link.to}>
+                <Anchor className='link' key={link.title} to={link.to}>
                   {link.title}
                 </Anchor>
               ))}
             </div>
-            <div className="col-2">
+            <div className="profile col-2">
               {show ? (
                 <button className="profile" onClick={handleShowMenu}>
                   <img src="/profile.png" />
-                  You are not logged in. (Log in)
                 </button>
               ) : (
-                <button className="login" type="button">
+                <a href='/login'>
+                  <button className="login" type="button">
                   <FaRegUser />
                   Login
                 </button>
+                </a>
               )}
             </div>
           </div>

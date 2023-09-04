@@ -1,0 +1,91 @@
+h4{
+    font-family: "Times New Roman", Times, serif 
+}
+
+.userName{
+    font-size:1.5em
+}
+
+.iti{
+    align-items: center;
+    width: 100%;
+    height: 20em;
+    text-align: center;
+    justify-content:center;
+}
+
+.itin{
+  background-color:gray; 
+  opacity:0.9;
+  border-radius: 20px;
+  margin:0 0 5% 0;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+
+.titleIt{
+    margin:3%;
+    font-family: "Times New Roman", Times, serif;
+    font-size:2rem;
+}
+
+.vmore{
+    margin:3%;
+}
+
+.vmore button{
+    border-radius: 5px;
+    text-align: center;
+    padding:8px; 
+    background-color: #555657;
+}
+
+.vmore button: hover{
+}
+
+.price{
+   justify-content: center;
+   align-items:center;
+   gap:3px;
+}
+
+.price img{
+    width: 10%;
+}
+
+.col-4{
+    justify-content: center;  
+    align-items:center;
+}
+
+.imagenUser{
+    align-items:center;
+    gap:10px;
+}
+
+.imagenUser img{
+    border-radius:50%;
+    width:7em; 
+}
+
+.activities{
+    justify-content: space-between;
+    gap:150px;
+    align-items: center;
+    margin-button:0%;
+}
+
+.activities h2{
+    margin-top: 100px;
+    color:red
+}
+
+
+@media (max-width: 768px) {
+    .iti{
+        flex-direction:column;
+        gap:20px;
+        height:24em;    
+    }
+}

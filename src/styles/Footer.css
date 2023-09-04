@@ -5,10 +5,10 @@ footer{
     botton: 0;
 }
 
-.link{
+.links{
     display: flex;
     justify-content:flex-end;
-    gap: 3rem; 
+    gap: 25px; 
     padding: 10px;
 }
 
@@ -22,7 +22,7 @@ footer{
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 425px) {
    .link{
     display:none
    }

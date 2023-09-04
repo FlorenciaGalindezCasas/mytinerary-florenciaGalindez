@@ -9,6 +9,14 @@
    justify-content: center;
 }
 
+.input button{
+    font-size:1.5em;
+}
+
+.input button:hover{
+    color:#6D99E0
+}
+
 input{
     text-align:center;
     border-radius:3%;

@@ -22,9 +22,9 @@ const Footer = () => {
             <FaInstagram size={30} />
           </a>
         </div>
-        <div className="col-6 link">
+        <div className="col-6 links">
           {links.map((link) => (
-            <Link key={link.title} to={link.to}>
+            <Link className='link' key={link.title} to={link.to}>
               {link.title}
             </Link>
           ))}

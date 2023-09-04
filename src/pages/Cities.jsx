@@ -1,41 +1,31 @@
-
-import Card from '../components/header.jsx/Card'
-import { Link } from 'react-router-dom'
-import axios from 'axios' //libreria para peticiones HTTP
-import { useEffect, useState } from 'react'
+import Card from "../components/header.jsx/Card";
+import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
 import { BiSearch } from "react-icons/bi";
- 
+import { useDispatch, useSelector } from "react-redux";
+import filterActions from "../store/actions/filterActions";
 
-const Cities = ()=> {
 
-  const [cities, setCities] = useState();
-  const [error, setError] = useState(null);
-
-  useEffect(()=> {
-   //transforma la response en formato JSON
-    axios.get("http://localhost:7000/api/cities?name=")
-     .then(response => setCities(response.data.cities))
-     .catch(err=> console.log(err))
-  },[]);
-
-  const handleInputChange = async(city)=>{
-
+const Cities = () => {
   
-    try{
-      const response = await axios.get(
-        `http://localhost:7000/api/cities?name=${city.target.value}` 
-      );
-        setCities(response.data.cities);
-        setError(null);
-      
-      
-    }catch(error){
-      console.log(error)
-      setCities([]);
-      setError("City not found");
-    }
-  }
+  let inputRef = useRef();
 
+  const dispatch = useDispatch();
+
+  const cities = useSelector((store) => store.filterReducer.cities);
+
+  const error = useSelector((store) => store.filterReducer.error);
+
+  useEffect(() => {
+    dispatch(filterActions.getCities())
+  }, [dispatch]);
+
+      function handleSearch() {
+       dispatch(filterActions.filterCities({
+        name: inputRef.current.value
+       }));
+        
+      }
 
   return (
     <div className="bodyCities">
@@ -45,15 +35,15 @@ const Cities = ()=> {
       </div>
 
       <div className="input">
-        <span>
-          <BiSearch />
-        </span>
         <input
-          onChange={handleInputChange}
+          ref={inputRef}
           className=""
           type="text"
           placeholder="Search your city"
         />
+        <button onClick={handleSearch}>
+          <BiSearch />
+        </button>
       </div>
       <div className="cityCards d-flex flex-wrap">
         {
@@ -66,6 +56,7 @@ const Cities = ()=> {
                   description={city.description}
                   image={city.image}
                   country={city.country}
+                  itinerary={city.itinerary}
                 />
               </Link>
             );
@@ -79,6 +70,6 @@ const Cities = ()=> {
       )}
     </div>
   );
-}
+};
 
-export default Cities
+export default Cities;

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.link{
+    font-family: "Times New Roman", Times, serif;
+    font-size:1.2em
+}
+
 .welcome{
     display:flex;
     flex-direction: column;

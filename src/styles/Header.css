@@ -10,19 +10,37 @@ header{
     justify-content: flex-end;
 }
 
-.links {
-    display:flex;
-    justify-content: space-around;
-    font-family: "Times New Roman", Times, serif;
+.anchor{
+  display:flex;
+  justify-content:flex-end;
+  gap: 25px
 }
 
+.link{
+  --b: 0.1em;   
+  --c: gray;   
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+.link:hover {
+  --_p: 100%;
+  --_s: .3s;
+}
 
 .login{
     display:flex;
+    justify-content:center;
     align-items: center;
     border-radius: 5px;
-    text-align: center;
-    padding:8px;   
+    width:100%;
+    padding:16px;   
 }
 
 .login:hover{
@@ -30,7 +48,7 @@ header{
     background-color: #6D99E0;
 }
 
-.profile {
+.profile{
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -38,24 +56,18 @@ header{
     padding:0.7em;
 }
 
-
-
 .profile:hover{
     color: gray;
 }
 
-
 @media (max-width: 992px) {
    .profile {
     text-indent: -9999px; 
-    overflow: hidden;
     padding-left:0px;
   }
    .profile img{
+    align-items:flex-start;
     width:35px;
-    padding-left:0px;
-  }
-  .login{
     padding-left:0px;
   }
 }

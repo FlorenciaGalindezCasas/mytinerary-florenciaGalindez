@@ -6,6 +6,7 @@ import "./styles/Hero.css"
 import "./styles/Footer.css"
 import "./styles/Card.css"
 import "./styles/CitiesDetails.css"
+import "./styles/CardItinerary.css"
 import "./App.css";
 import router from './router/router';
 

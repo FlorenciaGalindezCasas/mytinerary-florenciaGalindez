@@ -6,6 +6,7 @@ import { filterReducer } from "../store/reducers/filterReducer"
 
 export const store = configureStore({
     reducer:{
-        filterReducer: filterReducer
+        filterReducer: filterReducer,
+        userReducer: userReducer
     }
 })

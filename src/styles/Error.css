@@ -1,0 +1,21 @@
+.errors{
+    min-height: 100vh;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    background-color: #e5e8f5;
+}
+
+.errors p, .errors a{
+    font-size: 1.5em
+}
+
+.backHome{
+    background-color:white;
+}
+
+.backHome:hover{
+    background-color:#C1D1EA;
+    color:white
+}

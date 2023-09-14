@@ -1,20 +1,41 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { user_photo } from "../actions/userActions";
+import { user_login, user_login_google, user_logout, user_token } from "../actions/userActions";
 
 //valor inicial
 const initialState = { 
-  photo: "https://i.ibb.co/ft2M55S/Captura-de-pantalla-2022-06-29-193034.png",
+  user: null,
+  token: null
 }
 
 //addCase es como un switch
+export const userReducer = createReducer(initialState, (builder) =>
+  builder
+    .addCase(user_login.fulfilled, (state, action) => {
+      return {
+        ...state,
+        user: action.payload.user,
+        token: action.payload.token,
+      };
+    })
+    .addCase(user_login_google, (state, action) => {
+      return {
+        ...state,
+        user: action.payload.user,
+        token: action.payload.token,
+      };
+    })
+    .addCase(user_logout.fulfilled, (state, action) => {
+      return {
+        ...state,
+        user: null,
+        token: null,
+      };
+    })
 
-export const userReducer = createReducer(initialState, 
-    (builder) => builder
-       .addCase(user_photo, 
-       (state, action)=>{
-         return {
-            ...state,
-            photo: action.payload.photo
-         }
-       })
-    )
+    .addCase(user_token, (state, action) => {
+      return {
+        ...state,
+        user: action.payload.user,
+      };
+    })
+);

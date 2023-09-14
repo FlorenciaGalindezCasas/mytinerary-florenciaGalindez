@@ -15,7 +15,7 @@
   background-position: 0%;
   width: 100%;
   margin-bottom: 0;
-  font-size: 9em;
+  font-size: 8em;
   animation: clouds-moving infinite 150s;
   animation-fill-mode: forwards;
   animation-play-state: running;

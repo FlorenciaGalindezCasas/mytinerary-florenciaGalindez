@@ -11,7 +11,6 @@ const filterCities = createAsyncThunk("filterCities", async (obj) => {
       }
     } catch (error) {
        throw new Error("City not found");
-     
     } 
 
 })

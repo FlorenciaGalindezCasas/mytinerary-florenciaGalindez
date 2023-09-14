@@ -1,13 +1,13 @@
 header{
-    background-color:#C1D1EA;
+  background-color:#C1D1EA;
 }
 
 .logo{
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .menu{
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .anchor{
@@ -34,10 +34,11 @@ header{
   --_s: .3s;
 }
 
-.login{
+.login, .logout{
     display:flex;
     justify-content:center;
     align-items: center;
+    gap:5px;
     border-radius: 5px;
     width:100%;
     padding:16px;   
@@ -48,26 +49,46 @@ header{
     background-color: #6D99E0;
 }
 
-.profile{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
+.logout:hover{
+    color: white;
+    background-color: #E75555;
+}
+
+.userprofile{
+    text-align:center;
     border-radius: 5px; 
-    padding:0.7em;
 }
 
 .profile:hover{
     color: gray;
 }
 
-@media (max-width: 992px) {
-   .profile {
-    text-indent: -9999px; 
-    padding-left:0px;
-  }
-   .profile img{
-    align-items:flex-start;
-    width:35px;
-    padding-left:0px;
-  }
+.profile img{
+  border-radius:50%;
+  width:2.5em; 
 }
+
+.dropdown-menu{
+  position: fixed;
+  padding:0;
+  margin:20px 15px 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .dropdown-menu{
+   margin:20px 0 0 -25px;
+ }
+}
+
+@media (max-width: 768px) {
+     .userprofile {
+    text-align:left;
+    padding-top:5%
+  }
+    .dropdown-menu{
+   margin:10px 0 0 0px;
+ }
+
+}
+
+

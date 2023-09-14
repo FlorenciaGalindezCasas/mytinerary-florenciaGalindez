@@ -1,4 +1,4 @@
-import Card from "../components/header.jsx/Card";
+import Card from "../components/Card";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { BiSearch } from "react-icons/bi";
@@ -20,12 +20,11 @@ const Cities = () => {
     dispatch(filterActions.getCities())
   }, [dispatch]);
 
-      function handleSearch() {
-       dispatch(filterActions.filterCities({
-        name: inputRef.current.value
-       }));
-        
-      }
+  function handleSearch() {
+   dispatch(filterActions.filterCities({
+    name: inputRef.current.value
+   }));
+  }
 
   return (
     <div className="bodyCities">
